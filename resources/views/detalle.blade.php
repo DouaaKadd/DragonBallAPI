@@ -27,6 +27,7 @@
       border: 1px solid #e9ecef;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
+    
     .img-container {
       width: 100%;
       background: #f8f9fa;
