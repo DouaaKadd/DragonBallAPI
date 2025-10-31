@@ -8,7 +8,6 @@ use App\Models\Personaje;
 
 class DragonController extends Controller
 {
-    // ✅ Vista principal: muestra personajes desde BD, y si no hay, los obtiene de la API
     public function index()
     {
         $personajes = Personaje::all();
@@ -40,7 +39,6 @@ class DragonController extends Controller
         return view('principal', compact('personajes'));
     }
 
-    // ✅ Mostrar detalle de un personaje
     public function detalle($id)
     {
         $personaje = Personaje::find($id);
