@@ -46,6 +46,28 @@ class AppServiceProvider extends ServiceProvider
                         // Las migraciones se ejecutarán en el build command
                     }
                 }
+            } else {
+                // Si el archivo existe, verificar que la tabla tenga todas las columnas necesarias
+                try {
+                    $connection = \DB::connection();
+                    if ($connection->getSchemaBuilder()->hasTable('personajes')) {
+                        // Verificar si falta la columna 'nombre'
+                        if (!$connection->getSchemaBuilder()->hasColumn('personajes', 'nombre')) {
+                            // La tabla existe pero le falta la columna, recrear con migrate:fresh
+                            \Artisan::call('migrate:fresh', ['--force' => true]);
+                        }
+                    } else {
+                        // La tabla no existe, ejecutar migraciones
+                        \Artisan::call('migrate', ['--force' => true]);
+                    }
+                } catch (\Exception $e) {
+                    // Si hay algún error, intentar migrate:fresh para empezar de cero
+                    try {
+                        \Artisan::call('migrate:fresh', ['--force' => true]);
+                    } catch (\Exception $e2) {
+                        // Silenciar errores
+                    }
+                }
             }
         }
     }
