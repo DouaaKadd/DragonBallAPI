@@ -11,7 +11,7 @@
       min-height: 100vh;
     }
     .header-section {
-      background: #fffdfd;
+      background: #ef0b0b;
       border-radius: 16px;
       padding: 3rem 2rem;
       margin-bottom: 3rem;
@@ -96,8 +96,8 @@
 <body>
   <div class="container my-5">
     <div class="header-section text-center">
-      <h1 class="display-4 mb-3 fw-bold" style="color: #212529;">DragonBall </h1>
-      <p class="lead text-muted mb-0">Personajes de Dragon Ball</p>
+      <h1 class="display-4 mb-3 fw-bold" style="color: #212529;">DragonBall Laravel Cloud </h1>
+      <p class="lead text-muted mb-0">Personajes de Dragon Ball - Activitat AEA1</p>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
