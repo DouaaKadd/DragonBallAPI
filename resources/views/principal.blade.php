@@ -11,7 +11,7 @@
       min-height: 100vh;
     }
     .header-section {
-      background: #ffffff;
+      background: #d00909;
       border-radius: 16px;
       padding: 3rem 2rem;
       margin-bottom: 3rem;
@@ -33,7 +33,7 @@
     .character-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-      border-color: #667eea;
+      border-color: #ff0bae;
     }
     .character-card .img-container {
       width: 100%;
@@ -96,8 +96,8 @@
 <body>
   <div class="container my-5">
     <div class="header-section text-center">
-      <h1 class="display-4 mb-3 fw-bold" style="color: #212529;">DragonBall</h1>
-      <p class="lead text-muted mb-0">Personajes de Dragon Ball </p>
+      <h1 class="display-4 mb-3 fw-bold" style="color: #212529;">DragonBall Laravel Cloud</h1>
+      <p class="lead text-muted mb-0">Personajes de Dragon Ball- Activitat AEA 1</p>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
